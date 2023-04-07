@@ -4,8 +4,8 @@ import 'package:f_38_app_jam/components/text_fields.dart';
 import 'package:f_38_app_jam/components/welcome_text.dart';
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatelessWidget {
-  SignUpScreen({super.key});
+class SignIpScreen extends StatelessWidget {
+  SignIpScreen({super.key});
 
   // text editing controllers
   final emailController = TextEditingController();
