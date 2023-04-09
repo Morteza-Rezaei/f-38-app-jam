@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 class ForgotPassOrSignUpButton extends StatelessWidget {
@@ -15,6 +17,8 @@ class ForgotPassOrSignUpButton extends StatelessWidget {
               thickness: 0.5,
             ),
           ),
+
+          // Note: this is a text for now, but it will be a button later
           Text('Şifremi Unuttum / Kayıt Ol',
               style: TextStyle(
                 color: Colors.grey,

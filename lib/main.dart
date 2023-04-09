@@ -1,3 +1,4 @@
+import 'package:f_38_app_jam/view/home_page.dart';
 import 'package:f_38_app_jam/view/login_view.dart';
 import 'package:flutter/material.dart';
 
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUpScreen(),
+      home: SignInScreen(),
     );
   }
 }

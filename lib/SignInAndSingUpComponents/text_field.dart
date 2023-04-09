@@ -24,15 +24,18 @@ class LoginTextField extends StatelessWidget {
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.blue.shade100),
+            borderSide: BorderSide(color: Colors.blue.shade200),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.green.shade100),
+            borderSide: BorderSide(color: Colors.green.shade200),
           ),
           fillColor: Colors.white,
           filled: true,
           hintText: hintText,
+          hintStyle: const TextStyle(
+            color: Colors.grey,
+          ),
         ),
       ),
     );
