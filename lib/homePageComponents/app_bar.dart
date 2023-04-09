@@ -1,4 +1,4 @@
-import 'package:f_38_app_jam/components/search_bar.dart';
+import 'package:f_38_app_jam/homePageComponents/search_bar.dart';
 import 'package:flutter/material.dart';
 
 class AppBarAskAcademy extends StatelessWidget implements PreferredSizeWidget {

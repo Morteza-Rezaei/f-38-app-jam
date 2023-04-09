@@ -1,8 +1,6 @@
-import 'package:f_38_app_jam/components/app_bar.dart';
-import 'package:f_38_app_jam/components/drawer.dart';
-import 'package:f_38_app_jam/components/search_bar.dart';
+import 'package:f_38_app_jam/homePageComponents/app_bar.dart';
+import 'package:f_38_app_jam/homePageComponents/drawer.dart';
 import 'package:f_38_app_jam/view/ask_page.dart';
-import 'package:f_38_app_jam/view/login_view.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -46,17 +44,16 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
 
-      // app bar
-      appBar: const AppBarAskAcademy(), // call the app bar
+      appBar: const AppBarAskAcademy(),
+      // call the app bar
 
-      drawer: const DrawerBar(), // call the drawer
+      drawer: const DrawerBar(),
+      // call the drawer
 
-      // body
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
 
-      // floating action button
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context,
@@ -65,8 +62,9 @@ class _HomePageState extends State<HomePage> {
         child: const Icon(Icons.add),
       ),
 
-      //  bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: true,
+        unselectedFontSize: 8,
         items: const [
           BottomNavigationBarItem(
             icon: ImageIcon(AssetImage('assets/flutter.png')),
@@ -86,11 +84,13 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: ImageIcon(AssetImage('assets/digerKonular.png')),
             label: 'Diğer Konular',
-            backgroundColor: Colors.purple,
+            backgroundColor: Colors.orange,
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.black,
+        selectedIconTheme: const IconThemeData(size: 30),
+        unselectedIconTheme: const IconThemeData(size: 20),
         onTap: _onItemTapped,
       ),
     );

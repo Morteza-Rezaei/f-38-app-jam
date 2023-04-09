@@ -2,37 +2,37 @@
 
 import 'package:flutter/material.dart';
 
-class LoginTextField extends StatelessWidget {
+class AskTextField extends StatelessWidget {
   final controller;
-  final String hintText;
-  final bool obscureText;
+  final minLine;
+  final maxLine;
 
-  const LoginTextField({
+  const AskTextField({
     super.key,
     required this.controller,
-    required this.hintText,
-    required this.obscureText,
+    required this.minLine,
+    required this.maxLine,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: TextField(
-        controller: controller,
-        obscureText: obscureText,
+        minLines: minLine,
+        maxLines: maxLine,
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.blue.shade200),
+            borderSide: BorderSide(color: Colors.blue.shade300),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.green.shade200),
+            borderSide: BorderSide(color: Colors.green.shade300),
           ),
           fillColor: Colors.white,
           filled: true,
-          hintText: hintText,
+          hintText: 'Soru Başlığı',
           hintStyle: const TextStyle(
             color: Colors.grey,
           ),

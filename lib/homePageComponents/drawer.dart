@@ -1,3 +1,4 @@
+import 'package:f_38_app_jam/view/login_view.dart';
 import 'package:flutter/material.dart';
 
 class DrawerBar extends StatelessWidget {
@@ -87,7 +88,10 @@ class DrawerBar extends StatelessWidget {
             leading: const Icon(Icons.logout),
             title: const Text('Çıkış Yap'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SignInScreen()));
             },
           ),
         ],

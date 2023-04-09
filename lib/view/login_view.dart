@@ -1,7 +1,7 @@
-import 'package:f_38_app_jam/SignInAndSingUpComponents/text_field.dart';
-import 'package:f_38_app_jam/SignInAndSingUpComponents/button_forgot_pass_or_sign_up.dart';
-import 'package:f_38_app_jam/SignInAndSingUpComponents/log_in_button.dart';
-import 'package:f_38_app_jam/components/welcome_text.dart';
+import 'package:f_38_app_jam/signInAndSingUpComponents/text_field.dart';
+import 'package:f_38_app_jam/signInAndSingUpComponents/button_forgot_pass_or_sign_up.dart';
+import 'package:f_38_app_jam/signInAndSingUpComponents/log_in_button.dart';
+import 'package:f_38_app_jam/signInAndSingUpComponents/welcome_text.dart';
 import 'package:f_38_app_jam/view/home_page.dart';
 import 'package:flutter/material.dart';
 
