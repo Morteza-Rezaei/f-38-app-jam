@@ -20,7 +20,7 @@ class DrawerBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/morteza.jpg'),
+                  backgroundImage: AssetImage('assets/Avatar.png'),
                   radius: 40,
                 ),
                 SizedBox(height: 8),

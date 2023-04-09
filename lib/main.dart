@@ -1,4 +1,3 @@
-import 'package:f_38_app_jam/view/home_page.dart';
 import 'package:f_38_app_jam/view/login_view.dart';
 import 'package:flutter/material.dart';
 

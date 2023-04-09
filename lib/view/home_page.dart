@@ -1,36 +1,36 @@
 import 'package:f_38_app_jam/homePageComponents/app_bar.dart';
+
+import 'package:f_38_app_jam/view/diger_konular_main_page.dart';
 import 'package:f_38_app_jam/homePageComponents/drawer.dart';
+import 'package:f_38_app_jam/view/flutter_main_page.dart';
+import 'package:f_38_app_jam/view/game_art_main_page.dart';
+import 'package:f_38_app_jam/view/unity_main_page.dart';
 import 'package:f_38_app_jam/view/ask_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final int selectedIndex;
+  const HomePage({super.key, required this.selectedIndex});
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  late int _selectedIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.selectedIndex;
+  }
+
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Flutter Sayfası',
-      style: optionStyle,
-    ),
-    Text(
-      'Unity Sayfası',
-      style: optionStyle,
-    ),
-    Text(
-      'Game Art Sayfası',
-      style: optionStyle,
-    ),
-    Text(
-      'Diğer Konular Sayfası',
-      style: optionStyle,
-    ),
+    FlutterMainPage(),
+    UnityMainPage(),
+    GameArtMainPage(),
+    DigerKonularMainPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -52,14 +52,6 @@ class _HomePageState extends State<HomePage> {
 
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const AskPage()));
-        },
-        child: const Icon(Icons.add),
       ),
 
       bottomNavigationBar: BottomNavigationBar(

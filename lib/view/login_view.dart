@@ -3,6 +3,7 @@ import 'package:f_38_app_jam/signInAndSingUpComponents/button_forgot_pass_or_sig
 import 'package:f_38_app_jam/signInAndSingUpComponents/log_in_button.dart';
 import 'package:f_38_app_jam/signInAndSingUpComponents/welcome_text.dart';
 import 'package:f_38_app_jam/view/home_page.dart';
+import 'package:f_38_app_jam/view/select_categories_page.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _SignInScreenState extends State<SignInScreen> {
   // sign in button function
   void logInUser() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const HomePage()));
+        context, MaterialPageRoute(builder: (context) => const Categories()));
   }
 
   @override
