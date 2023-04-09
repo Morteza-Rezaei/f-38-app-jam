@@ -15,8 +15,8 @@ class FloatingAskButton extends StatelessWidget {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const AskPage()));
       },
-      child: const Icon(Icons.add),
       backgroundColor: askButtonColor,
+      child: const Icon(Icons.add),
     );
   }
 }

@@ -5,9 +5,7 @@ import 'package:f_38_app_jam/homePageComponents/drawer.dart';
 import 'package:f_38_app_jam/view/flutter_main_page.dart';
 import 'package:f_38_app_jam/view/game_art_main_page.dart';
 import 'package:f_38_app_jam/view/unity_main_page.dart';
-import 'package:f_38_app_jam/view/ask_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class HomePage extends StatefulWidget {
   final int selectedIndex;

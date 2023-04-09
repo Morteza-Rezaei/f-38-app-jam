@@ -2,7 +2,6 @@ import 'package:f_38_app_jam/homePageComponents/app_bar.dart';
 import 'package:f_38_app_jam/homePageComponents/drawer.dart';
 import 'package:f_38_app_jam/selectCategoryComponents/select_category.text.dart';
 import 'package:f_38_app_jam/selectCategoryComponents/select_category_button.dart';
-import 'package:f_38_app_jam/view/ask_page.dart';
 import 'package:f_38_app_jam/view/home_page.dart';
 import 'package:flutter/material.dart';
 
