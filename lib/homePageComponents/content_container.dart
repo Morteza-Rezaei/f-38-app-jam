@@ -1,6 +1,7 @@
+import 'package:f_38_app_jam/view/answer_page.dart';
 import 'package:flutter/material.dart';
 
-class ContentBox extends StatelessWidget {
+class ContentBox extends StatefulWidget {
   final String userName;
   final String title;
   final String question;
@@ -21,11 +22,19 @@ class ContentBox extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<ContentBox> createState() => _ContentBoxState();
+}
+
+class _ContentBoxState extends State<ContentBox> {
+  bool isLiked = false;
+  bool isSaved = false;
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        color: boxColor,
+        color: widget.boxColor,
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -42,7 +51,7 @@ class ContentBox extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     image: DecorationImage(
-                      image: AssetImage(userImage),
+                      image: AssetImage(widget.userImage),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -54,14 +63,14 @@ class ContentBox extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      userName,
+                      widget.userName,
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                       ),
                     ),
                     Text(
-                      userStatus,
+                      widget.userStatus,
                       textAlign: TextAlign.start,
                       style: const TextStyle(
                         fontSize: 12,
@@ -89,7 +98,7 @@ class ContentBox extends StatelessWidget {
                     vertical: 10.0,
                   ),
                   child: Text(
-                    title,
+                    widget.title,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -117,7 +126,7 @@ class ContentBox extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      question,
+                      widget.question,
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
@@ -134,7 +143,7 @@ class ContentBox extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Center(
                 child: Image.asset(
-                  imageOfQuestion,
+                  widget.imageOfQuestion,
                   height: 190,
                 ),
               ),
@@ -146,14 +155,29 @@ class ContentBox extends StatelessWidget {
                 children: [
                   // beğen butonu
                   IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.favorite_rounded),
+                    onPressed: () {
+                      setState(() {
+                        isLiked = !isLiked;
+                      });
+                    },
+                    icon: Icon(
+                      Icons.favorite_rounded,
+                      color: isLiked ? Colors.red : Colors.grey,
+                    ),
                   ),
 
                   // cevapla butonu
                   IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.mode_comment_rounded),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AnswerPage()));
+                    },
+                    icon: const Icon(
+                      Icons.mode_comment_rounded,
+                      color: Colors.grey,
+                    ),
                   ),
 
                   Expanded(
@@ -162,8 +186,15 @@ class ContentBox extends StatelessWidget {
 
                   // kaydet butonu
                   IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.bookmark_rounded),
+                    onPressed: () {
+                      setState(() {
+                        isSaved = !isSaved;
+                      });
+                    },
+                    icon: Icon(
+                      Icons.bookmark_rounded,
+                      color: isSaved ? Colors.blue : Colors.grey,
+                    ),
                   ),
                 ],
               ),

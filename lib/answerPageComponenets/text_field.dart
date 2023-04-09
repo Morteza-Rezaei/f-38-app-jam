@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 
-class AskTextField extends StatelessWidget {
+class AnswerTextField extends StatelessWidget {
   final controller;
   final minLine;
   final maxLine;
   final String hintText;
 
-  const AskTextField({
+  const AnswerTextField({
     super.key,
     required this.controller,
     required this.minLine,

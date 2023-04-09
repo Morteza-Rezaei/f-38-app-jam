@@ -1,17 +1,17 @@
-import 'package:f_38_app_jam/askPageComponents/container_bottom_icons.dart';
-import 'package:f_38_app_jam/askPageComponents/text_field.dart';
+import 'package:f_38_app_jam/answerPageComponenets/container_bottom_icons.dart';
+import 'package:f_38_app_jam/answerPageComponenets/text_field.dart';
 import 'package:f_38_app_jam/homePageComponents/app_bar.dart';
 import 'package:f_38_app_jam/homePageComponents/drawer.dart';
 import 'package:flutter/material.dart';
 
-class AskPage extends StatefulWidget {
-  const AskPage({super.key});
+class AnswerPage extends StatefulWidget {
+  const AnswerPage({super.key});
 
   @override
-  State<AskPage> createState() => _AskPageState();
+  State<AnswerPage> createState() => _AnswerPageState();
 }
 
-class _AskPageState extends State<AskPage> {
+class _AnswerPageState extends State<AnswerPage> {
   final questionTitleController = TextEditingController();
   final questionBodyController = TextEditingController();
 
@@ -31,13 +31,13 @@ class _AskPageState extends State<AskPage> {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.only(
-              top: 20,
+              top: 30,
               left: 15,
               right: 15,
               bottom: 40,
             ),
 
-            // soru sorma alanı
+            // Cevap verme alanı
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.teal.shade50,
@@ -47,33 +47,16 @@ class _AskPageState extends State<AskPage> {
                 children: [
                   const SizedBox(height: 20),
 
-                  // Soru başlığı
-                  AskTextField(
-                    controller: questionTitleController,
-                    minLine: 1,
-                    maxLine: 2,
-                    hintText: 'Soru başlığını giriniz',
-                  ),
-
-                  // divider
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
-                    child: Divider(
-                      color: Colors.grey,
-                      thickness: 0.5,
-                    ),
-                  ),
-
-                  // Soru içeriği
-                  AskTextField(
-                    hintText: 'Soru içeriğini giriniz',
+                  // Cevap içeriği
+                  AnswerTextField(
+                    hintText: 'Cevabınızı giriniz',
                     controller: questionBodyController,
-                    minLine: 7,
+                    minLine: 14,
                     maxLine: 100,
                   ),
 
                   // buttonların olduğu satır
-                  const AskPageContainerIcons(),
+                  const AnswerPageContainerIcons(),
                 ],
               ),
             ),
