@@ -1,5 +1,5 @@
 # Oyun ve Uygulama Akademisi App Jam
-# AskAcademy
+## AskAcademy
 
 Merhaba👋 Uygulamamızın amacı, Oyun ve Uygulama Akademisi'nin bursiyerleri ve mezunlarını bir araya getirerek, birbirlerinin sorularını çözmelerine, karşılaştıkları hataları gidermelerine ve fikir alışverişinde bulunmalarına yardımcı olmaktır.
 
@@ -9,7 +9,7 @@ Merhaba👋 Uygulamamızın amacı, Oyun ve Uygulama Akademisi'nin bursiyerleri 
 ```bash
 $ git clone https://github.com/Morteza-Rezaei/f-38-app-jam.git
 ```
-Repoyu klonladıktan sonra flutter pub get komutu ile dependenciesleri de indirmeniz gerek.
+Repoyu klonladıktan sonra flutter pub get komutu ile dependencies'leri de indirmeniz gerekiyor.
 
 ### Contributors
 * Ayşe ALMACI ([aysealmaci](https://github.com/aysealmaci))
